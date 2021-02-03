@@ -1,0 +1,24 @@
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col-md-4" *ngFor="let item of Videos">
+      <div class="card">
+        <img [src]="item.thumbnails.high.url" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <small>Autor: {{ item.channelTitle }}</small> <br>
+          <small>Fecha de publicaion: {{ item.publishedAt | date: 'dd/MM/yy' }}</small> <br>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <button (click)="GetVideo(item)" class="btn btn-info">Ver Video</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
